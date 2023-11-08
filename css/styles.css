@@ -42,7 +42,7 @@ body {
 
 }
 
-.title {
+.header-title {
     font-size: 2em;
     text-align: center;
     color: var(--text-color);
@@ -86,11 +86,16 @@ body {
 .menu-profiles {
     display: flex;
     align-items: center;
-    width: 10%;
+    width: 10%;  
     flex-flow: row nowrap;
     justify-content: space-around;
     margin-right: 20px;
 }
+
+.menu-profiles a {
+    flex-shrink: 1;
+}
+
 
 .menu-profiles img {
     height: 40px;
@@ -132,6 +137,57 @@ body {
     font-size: 1em;
     text-align: left;
     color: rgb(104, 104, 104);
+    
 }
 
+.more-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-flow: column wrap;
+    margin-bottom: 20px;
+    width: 100%;
+    margin-top: 40px;
+}
 
+.title {
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-size: var(--title-font-size);
+    margin-bottom: 10px;
+}
+
+.paragraph {
+    font-size: 1em;
+    text-align: left;
+    color: rgb(104, 104, 104);
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 20px;
+
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: #1d1d1d;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.footer-paragraph {
+    font-size: 1em;
+    text-align: center;
+    color: rgb(104, 104, 104);
+}

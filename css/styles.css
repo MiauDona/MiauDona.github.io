@@ -2,9 +2,23 @@
 
 :root {
     --padding-container: 100px 0;
-    --text-color: #bebebe;
     --title-font-size: 2rem;
     --title-font-weight: 700;
+
+    --shadow-color: rgba(124, 38, 223, 1);
+    --text-color: rgb(173, 101, 255);
+    --title-color: rgb(132, 28, 202);
+    --background-color: #141414;
+    --background-color-2: #1d1d1d;
+    --background-color-3: #2a2a2a;
+    --background-color-4: #3a3a3a;
+    --link-color: rgb(179, 132, 179);
+    --link-color-hover: #f00;
+    --link-color-active: #f00;
+    --link-color-visited: #f00;
+    --link-color-focus: #f00;
+    --border-color: rgba(124, 38, 223, 1);
+
 
 }
 * {
@@ -21,7 +35,7 @@ body {
     
 }
 .container {
-    max-width: 1200px;
+    max-width: 768px;
     margin: 0 auto;
     padding: var(--padding-container);
 }
@@ -47,7 +61,8 @@ body {
 .header-title {
     font-size: 2em;
     text-align: center;
-    color: var(--text-color);
+    color: var(--title-color);
+    margin-bottom: 5px;
 }
 
 .menu {
@@ -57,9 +72,12 @@ body {
     padding: 0 20px;
     margin-bottom: 20px;
     height: 100px;
-    box-shadow: 0 0 10px rgba(124, 38, 223, 1);
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 0 1px 1px 1px;
+    box-shadow: 0 5px 10px var(--shadow-color);
     background-color: #1d1d1d;
-    color: rgba(124, 38, 223, 1);
+    color: var(--text-color);
     text-align: center;
     overflow: hidden;
     position: fixed;
@@ -91,6 +109,7 @@ body {
     flex-flow: row nowrap;
     justify-content: space-around;
     margin-right: 20px;
+    text-align: center;
 }
 
 .menu-profiles a {
@@ -105,7 +124,7 @@ body {
 
 .menu a {
     text-decoration: none;
-    color:rgba(124, 38, 223, 1);
+    color:var(--text-color);
     font-size: 1.2rem;
     margin-right: 20px;
 
@@ -132,6 +151,14 @@ body {
     padding: 0 20px;
     margin-bottom: 20px;
     width: 50%;
+    
+}
+
+.line {
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 5px 10px var(--shadow-color);
 }
 
 .header-paragraph {
@@ -158,6 +185,7 @@ body {
     font-size: 1.5em;
     font-size: var(--title-font-size);
     margin-bottom: 10px;
+    color: rgb(179, 132, 179);;
 }
 
 .paragraph {
@@ -196,9 +224,12 @@ body {
 
 /* Mobile */
 @media only screen and (max-width:680px) {
+    body {
+        min-width: 325px;
+    }
     .header {
         min-height: 400px;
-        max-height: 600px;
+        max-height: 700px;
     }
 
     .header-container {
@@ -211,8 +242,9 @@ body {
 
     .menu {
         height: 80px;
-        font-size: 0.9em;
-        
+        max-height: 100px;
+        display: flex;
+        flex-flow: row nowrap;
     }
 
     .menu-logo {
@@ -223,7 +255,6 @@ body {
 
     .menu-navigator {
         width: 60%;
-        font-size: 0.9em;
         justify-content: space-evenly;
         margin-left: 8px;
         margin-right: 8px;

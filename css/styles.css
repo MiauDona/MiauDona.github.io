@@ -38,7 +38,7 @@ body {
     min-height: 100vh; /* Cambiado de height: 100vh; */
     max-height: 1000px;
     position: relative;
-    background-image: url('img/header-bg.jpg');
+    /*background-image: url('');*/
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

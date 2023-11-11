@@ -1,6 +1,6 @@
 /* Para navegadores WebKit (Chrome, Safari) */
 ::-webkit-scrollbar {
-    width: 12px; /* Ancho de la barra de desplazamiento */
+    width: 10px; /* Ancho de la barra de desplazamiento */
     
 }
 
@@ -15,7 +15,7 @@
 
 /* Para navegadores Firefox */
 ::-moz-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 
 ::-moz-scrollbar-thumb {

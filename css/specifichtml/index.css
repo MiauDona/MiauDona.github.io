@@ -1,0 +1,24 @@
+.line {
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 5px 10px var(--shadow-color);
+    z-index: 101;
+    margin-bottom: 10px;
+}
+
+.more-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    flex-flow: column wrap;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.more-info {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}

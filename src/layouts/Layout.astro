@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -21,32 +21,33 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+	@font-face {
+  		font-family: "Paquito";
+  		src: url("Paquito-Variable.woff") format("woff"); 
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		color:white;
-		background: #13151a;
-		background-size: 224px;
+	@font-face {
+  		font-family: "Literata"; 
+  		src: url("Literata-Variable.woff") format("woff"); 
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	.paquito {
+		font-family: Paquito, sans-serif;
 	}
+
+	.literata {
+		font-family: Literata, serif;
+	}
+
+	a {
+		color: #0070f3;
+		text-decoration: none;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		body {
+			background-color: rgb(8, 8, 8);
+			color: white;
+		}
+	}
+
 </style>

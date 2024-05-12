@@ -11,22 +11,14 @@ import Footer from '../components/Footer.astro';
 	<Nav/>
 	<Header/>
 	
-	<main>
-		<h1>Adote um gatinho</h1>
-		<p>Conheça nossos gatinhos disponíveis para adoção</p>
+	<main class="flex flex-col justify-center items-center">
+		<div class="max-w-[900px] flex flex-col justify-center items-center">
+			<SobreMi/>
+			<Curriculum/>
+		</div>
 	</main>
-	<Curriculum/>
-	<SobreMi/>
 	
 	<Footer/>
 </Layout>
 
-<style>
-	
-	main {
-		
-	}
-	
-	
-	
-</style>
+

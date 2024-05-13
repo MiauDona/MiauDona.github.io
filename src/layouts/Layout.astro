@@ -12,8 +12,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/png" href="img/Gato_D.png"/>
 		<title>{title}</title>
 	</head>
 	<body>
@@ -26,22 +25,47 @@ const { title } = Astro.props;
   		src: url("Paquito-Variable.woff") format("woff"); 
 	}
 	@font-face {
-  		font-family: "Literata"; 
-  		src: url("Literata-Variable.woff") format("woff"); 
+  		font-family: "Literata Bold"; 
+  		src: url("Literata-Bold.woff2") format("woff2"); 
+	}
+	@font-face {
+  		font-family: "Literata Medium"; 
+  		src: url("Literata-Medium.woff2") format("woff2"); 
+	}
+	
+	@font-face {
+  		font-family: "Literata Light"; 
+  		src: url("Literata-Light.woff2") format("woff2"); 
 	}
 
 	.paquito {
 		font-family: Paquito, sans-serif;
 	}
-
-	.literata {
-		font-family: Literata, serif;
+	
+	.literata-bold {
+		font-family: "Literata Bold", serif;
+	}
+	
+	.literata-medium {
+		font-family: "Literata Medium", serif;
+	}
+	
+	.literata-light {
+		font-family: "Literata Light", serif;
 	}
 
 	a {
 		color: #0070f3;
 		text-decoration: none;
 	}
+
+	h2 {
+    font-family: "Literata Bold", sans-serif;
+  }
+  	p {
+    font-family: "Literata Light", sans-serif;
+  }
+
 
 	@media (prefers-color-scheme: dark) {
 		body {

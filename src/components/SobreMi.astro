@@ -1,8 +1,8 @@
 <section class="flex my-4 gap-4">
-  <div class="my-card">
+  <div class="my-card p-4 rounded-2xl ">
     <article class="my-4 front-side">
-      <h2 class="text-3xl mb-3">¿Quién soy?</h2>
-      <p>
+      <h2 class="text-3xl mb-3 zilla-slab-regular">¿Quién soy?</h2>
+      <p class="zilla-slab-light">
         Me gusta la informática desde pequeño y siempre he querido dedicarme a
         ello. Actualmente estoy en 2º de Grado Medio en Sistemas Microinformáticos
         y Redes. En 3º de la ESO descubrí la psicología y me hizo dudar sobre qué
@@ -10,8 +10,8 @@
       </p>
     </article>
     <article class="my-4 back-side">
-      <h2 class="text-3xl mb-3 ">¿Por qué MiauDona?</h2>
-      <p>
+      <h2 class="text-3xl mb-3 zilla-slab-regular">¿Por qué MiauDona?</h2>
+      <p class="zilla-slab-light">
         Básicamente porque al invertir las sílabas de mi nombre sale "Donanfer" y
         la edad de cuando me creé mi primer nombre de usuario fue a los 9 años,
         por lo que fue este fue "donanfer9". Con el tiempo al empezar a
@@ -26,12 +26,9 @@
 <style>
   section .my-card {
     background-color: #c714be09;
-    padding: 1rem;
-    border-radius: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transform-style: preserve-3d;
     transition: 0.5s;
-    border-radius: 10px;
     perspective: 1000px;
     height: 200px;
   }
@@ -50,16 +47,12 @@
   
   .front-side {
     color: #f3f4f6;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
     transform: rotateY(0deg);
   }
 
   .back-side {
     color: #f3f4f6;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
     display: none;
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
 </style>

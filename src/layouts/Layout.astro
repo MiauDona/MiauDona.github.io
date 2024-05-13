@@ -1,6 +1,6 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
@@ -8,70 +8,60 @@ const { title } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="img/Gato_D.png"/>
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="img/Gato_D.png" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style is:global>
-	@font-face {
-  		font-family: "Paquito";
-  		src: url("img/Paquito-Variable.woff") format("woff"); 
-	}
-	@font-face {
-  		font-family: "Literata Bold"; 
-  		src: url("img/Literata-Bold.woff2") format("woff2"); 
-	}
-	@font-face {
-  		font-family: "Literata Medium"; 
-  		src: url("img/Literata-Medium.woff2") format("woff2"); 
-	}
-	
-	@font-face {
-  		font-family: "Literata Light"; 
-  		src: url("img/Literata-Light.woff2") format("woff2"); 
-	}
+  @import url("https://fonts.googleapis.com/css2?family=Jaini&family=Mitr:wght@200&family=Zilla+Slab:wght@300;400&display=swap");
 
-	.paquito {
-		font-family: Paquito, sans-serif;
-	}
-	
-	.literata-bold {
-		font-family: "Literata Bold", serif;
-	}
-	
-	.literata-medium {
-		font-family: "Literata Medium", serif;
-	}
-	
-	.literata-light {
-		font-family: "Literata Light", serif;
-	}
+  .zilla-slab-light {
+    font-family: "Zilla Slab", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
 
-	a {
-		color: #0070f3;
-		text-decoration: none;
-	}
+  .zilla-slab-regular {
+    font-family: "Zilla Slab", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
-	h2 {
+  .mitr {
+    font-family: "Mitr", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  .jaini {
+    font-family: "Jaini", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+
+  h2 {
     font-family: "Literata Bold", sans-serif;
   }
-  	p {
+  p {
     font-family: "Literata Light", sans-serif;
   }
 
-
-	@media (prefers-color-scheme: dark) {
-		body {
-			background-color: rgb(8, 8, 8);
-			color: white;
-		}
-	}
-
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: rgb(8, 8, 8);
+      color: white;
+    }
+  }
 </style>

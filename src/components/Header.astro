@@ -1,26 +1,17 @@
 ---
 
 import Background from "./Background.astro";
-import GridCards from "./GridCards.astro";
 ---
 
 <header class="h-[99.9vh] flex justify-center items-center flex-col sm:gap-6 relative ">
-      <Background o='.4' tx='90vw' ty='90vh' x='calc(50% - var(--tx)/2)' y='calc(50% - var(--ty)/2)'/>
       <h1 class="text-5xl sm:text-6xl jaini">MiauDona</h1>
       <p class="text-lg jaini">Fernando de Cisneros </p>
-
-
 </header>
 
-<div class="w-full h-[1px] bg-white flex justify-center items-center shadow-xl shadow-white">
-      <hr class="border-y border-purple-500 shadow-xl  shadow-purple-700 h-[2px] " />
-</div>
+
 
 
 <style>
-    hr {
-        width: 100%;
-    }
     h1, p {
           background: linear-gradient(to right, rgba(220, 173, 243, 1), rgba(197, 132, 228, 1), rgba(203, 118, 243, 1), rgba(197, 132, 228, 1), rgba(203, 118, 243, 1), rgba(197, 132, 228, 1), rgba(220, 173, 243, 1));
           background-clip: text;

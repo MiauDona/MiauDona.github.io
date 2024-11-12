@@ -19,8 +19,8 @@ const x = Astro.props.x || '0'; // Distancia contando desde la izquierda
 
 <style define:vars={{o, tx, ty, x, y}}>
     .circulo {
-        width: 100vw;
-        height: 40vh;
+        width: var(--tx);
+        height: var(--ty);
         background: radial-gradient(farthest-side, rgba(189, 73, 247, 1), rgba(0,0,0, 0.1));
         opacity: var(--o);
         position: absolute;

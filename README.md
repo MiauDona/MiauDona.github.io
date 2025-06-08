@@ -1,8 +1,8 @@
-# Esta es mi página de presentación
-Servirá como currículum o como presentación mía.
+# Este es mi portfolio web
+Servirá como currículum o portfolio.
 
 ## Diseño
-Diseño sin terminar
-<img src="Figma.png" alt="Figma"></img>
-
+<img src="Figma1.png">
+<img src="Figma2.png">
+<img src="Figma3.png">
 

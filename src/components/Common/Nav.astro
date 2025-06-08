@@ -1,34 +1,71 @@
-<nav
-  class="text-white text-xl sm:text-2xl flex h-20 font-bold items-center lg:flex lg:justify-center fixed top-0 w-full z-10"
->
-  <div
-    class="flex justify-between items-center lg:w-[900px] sm:w-[90%] w-[98%] px-[2%] sm:px-[10%] lg:px-0 lg:margin-auto"
-  >
-    <!-- 
-      <div class="md:hidden">
-      <div class=""><img src="img/menu.svg" alt="menu" class="w-12 md:w-20 lg:w-24"></div>
-      </div> -->
-    <div class="">
-      <a href=""><img src="img/Logo_MD.png" alt="Logo" class="w-20" /></a>
-    </div>
-    <div class="md:ml-28 hidden md:flex gap-2"></div>
-    <div class="flex gap-2">
-      <a href="https://miaudona.me/youtube"
-        ><img src="img/youtube.svg" alt="YT" class="w-12" /></a
-      >
-      <a href="https://miaudona.me/instagram"
-        ><img src="img/instagram.svg" alt="IG" class="w-12" /></a
-      >
-      <a href="https://miaudona.me/github"
-        ><img src="img/github.svg" alt="Git" class="w-12" /></a
-      >
-    </div>
-  </div>
+<nav>
+  
+  <button type="button" id="hamburger-menu">
+    <span class="sr-only">Menu</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
+  <button type="button" id="light-dark">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+  <button type="button" id="language">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
+      <path d="M12.5 7h-1v6h1V7zM12.5 15h-1v1h1v-1z"></path>
+    </svg>
+  </button>
+
 </nav>
 
 <style>
   nav {
-    background-color: rgba(0, 0, 0, 0.329);
-    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    z-index: 1000;
+    height: 60px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+  }
+  svg {
+    width: 30px;
+    height: 30px;
   }
 </style>

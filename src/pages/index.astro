@@ -1,29 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Header from "../components/Index/Header.astro";
-import Nav from "../components/Common/Nav.astro";
 import Footer from "../components/Common/Footer.astro";
-import Background from "../components/Common/Background.astro";
-import Proyectos from "../components/Index/Proyectos.astro";
+import Nav from "../components/Common/Nav.astro";
+import SobreMi from "../components/Index/SobreMi.astro";
 ---
 
 <Layout title="MiauDona">
-  <Nav />
-  <Header />
-
+<Nav />
   <main class="flex flex-col justify-center items-center">
     <div class="max-w-[900px] flex flex-col justify-center items-center gap-1">
-      <!-- <Curriculum/> -->
-      <!-- <GridCards/> -->
-      <Proyectos />
+      <SobreMi/>
     </div>
   </main>
-  <div class="hidden sm:block">
-    <Background o=".4" tx="130vw" ty="150vh" x="-80vw" y="-60dvh" />
-    <Background o=".2" tx="120vw" ty="140vh" x="55vw" y="50dvh" />
-  </div>
-  <div class="sm:hidden block">
-    <Background o=".4" tx="200vw" ty="100vh" x="-30vw" y="-45dvh" />
-  </div>
   <Footer />
 </Layout>

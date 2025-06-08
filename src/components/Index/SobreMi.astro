@@ -1,65 +1,17 @@
-<section class="flex">
-  <div class="my-card">
-    <article class="my-4 front-side rounded-2xl p-4 mx-4 lg:mx-0">
-      <h2 class="text-3xl mb-3 zilla-slab-regular">¿Quién soy?</h2>
-      <p class="zilla-slab-light">
-        Actualmente, estoy en 1º de Grado Superior en Desarrollo de aplicaciones
-        multiplataforma. En la ESO, consideré estudiar psicología, pero la
-        pasión por la tecnología prevaleció. Ahora, estoy centrado en explorar
-        el mundo digital en constante evolución y contribuir a su desarrollo y
-        comprensión de manera significativa.
-      </p>
-    </article>
-    <article class="my-4 back-side rounded-2xl p-4 mx-4 lg:mx-0">
-      <h2 class="text-3xl mb-3 zilla-slab-regular">¿Por qué MiauDona?</h2>
-      <p class="zilla-slab-light">
-        Mi nombre de usuario "MiauDona" surgió de una curiosa anécdota. Al
-        invertir las sílabas de mi nombre original, obtenía "Donanfer", y a los
-        9 años, cuando creé mi primer nombre de usuario en internet, lo elegí
-        como "donanfer9". Con el tiempo, mis amigos en línea comenzaron a
-        llamarme "Dona", y como me encantan los gatos, hace poco cambié mi
-        nombre a "MiauDona".
-      </p>
-    </article>
-  </div>
-</section>
+---
+import SobreMiCard from "./SobreMiCard.astro";
+---
+<h2>Sobre mí</h2>
+
+<div>
+  <SobreMiCard content="Test" icon="" />
+  <SobreMiCard content="Test" icon="" />
+  <SobreMiCard content="Test" icon="" />
+</div>
 
 <style>
-  section .my-card {
-    transform-style: preserve-3d;
-    transition: 0.3s;
-    perspective: 1000px;
-    height: max-content;
-  }
-
-  section:hover .my-card {
-    transform: rotateY(180deg);
-  }
-
-  section:hover .my-card .front-side {
-    display: none;
-  }
-
-  section:hover .my-card .back-side {
-    display: block;
-  }
-
-  .front-side {
-    color: #f3f4f6;
-    transform: rotateY(0deg);
-    background-color: #c714be4b;
-    min-height: 170px;
-    height: fit-content;
-    border: 3px solid #c714be4b;
-  }
-
-  .back-side {
-    color: #f3f4f6;
-    display: none;
-    transform: rotateY(-180deg);
-    background-color: #2577f14b;
-    min-height: 170px;
-    height: fit-content;
-    border: 3px solid #2577f14b;
-  }
+    div {
+        display: flex;
+        gap: 1rem;
+    }
 </style>

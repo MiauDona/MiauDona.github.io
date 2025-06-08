@@ -1,0 +1,26 @@
+---
+interface Props {
+    icon: string;
+    content: string;
+}
+
+const { icon, content } = Astro.props;
+---
+<div class="card flex justify-center items-center">
+    <div class="card-icon">
+        <img src={icon} alt="">
+    </div>
+    <div class="card-content">
+        <p>{content}</p>
+    </div>
+</div>
+
+<style>
+    .card {
+        border-radius: 16px;
+        border: 1px solid #6ea0fd;
+        padding: 0 1rem;
+        width: 100%;
+        max-width: 400px;
+    }
+</style>

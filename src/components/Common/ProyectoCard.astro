@@ -29,17 +29,35 @@ const tec5 = Astro.props.tec5;
 
 // todo: agregar imagenes de los proyectos
 // todo: hacer que al pasar por encima se abra la descripcion completa y se cierre
-// 
+//
 ---
 
-
-
-<div class="card pb-4 px-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/10 p-8">
-  <div class="pb-2">
+<div
+  class="card rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 p-8"
+>
+  <div class="pb-2 flex justify-between items-center">
     <h3 class="text-4xl sm:text-4xl mb-4">{title}</h3>
+
+    <div class="flex sm:items-center sm:justify-center sm:items-center gap-2">
+      <div class="">
+        {tec && <img src={tec} alt="tec" class="w-8 h-8" />}
+      </div>
+      <div class="">
+        {tec2 && <img src={tec2} alt="tec2" class="w-8 h-8" />}
+      </div>
+      <div class="">
+        {tec3 && <img src={tec3} alt="tec3" class="w-8 h-8" />}
+      </div>
+      <div class="">
+        {tec4 && <img src={tec4} alt="tec4" class="w-8 h-8" />}
+      </div>
+      <div class="">
+        {tec5 && <img src={tec5} alt="tec5" class="w-8 h-8" />}
+      </div>
+    </div>
   </div>
-  <div class="sm:grid sm:grid-cols-12 sm:gap-x-2 flex flex-col gap-4">
-    <div class="sm:col-span-9 text-xl gap-8">
+  <div class="flex flex-col gap-4">
+    <div class="text-xl gap-8">
       <div class="zilla-slab-regular gap-4 flex flex-col">
         {text && <p class=" ">{text}</p>}
         {text2 && <p class="">{text2}</p>}
@@ -49,32 +67,15 @@ const tec5 = Astro.props.tec5;
       <div class="text-xl mt-4">
         {
           link && (
-            <a class="p-1 pl-0 w-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-xl px-4 py-2 flex justify-center items-center" href={link}>
+            <a
+              class="p-1 pl-0 w-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 rounded-xl sm:px-12 py-2 flex justify-center items-center"
+              href={link}
+            >
               Échale un vistazo
             </a>
           )
         }
       </div>
-    </div>
-
-    <div class="sm:col-span-3 flex sm:flex-row-reverse sm:items-end sm:justify-start">
-      
-      <div class="sm:w-16 w-8">
-        {tec && <img src={tec} alt="tec" class="w-8 h-8" />}
-      </div>
-      <div class="sm:w-16 w-8">
-        {tec2 && <img src={tec2} alt="tec2" class="w-8 h-8" />}
-      </div>
-      <div class="sm:w-16 w-8">
-        {tec3 && <img src={tec3} alt="tec3" class="w-8 h-8" />}
-      </div>
-      <div class="sm:w-16 w-8">
-        {tec4 && <img src={tec4} alt="tec4" class="w-8 h-8" />}
-      </div>
-      <div class="sm:w-16 w-8">
-        {tec5 && <img src={tec5} alt="tec5" class="w-8 h-8" />}
-      </div>
-      
     </div>
   </div>
 </div>

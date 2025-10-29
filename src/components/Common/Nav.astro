@@ -1,34 +1,44 @@
+---
+import LineaSeparadoraHorizontal from "./LineaSeparadoraHorizontal.astro";
+---
+
 <nav
-  class="text-white text-xl sm:text-2xl flex h-20 font-bold items-center lg:flex lg:justify-center fixed top-0 w-full z-10"
+  class="text-white text-xl sm:text-2xl h-20 font-bold fixed top-0 w-full z-10 flex items-center justify-center flex-col"
 >
-  <div
-    class="flex justify-between items-center lg:w-[900px] sm:w-[90%] w-[98%] px-[2%] sm:px-[10%] lg:px-0 lg:margin-auto"
-  >
-    <!-- 
+  <div class="lg:flex lg:justify-center items-center w-full">
+    <div
+      class="flex justify-between items-center lg:w-[900px] sm:w-[90%] w-[98%] px-[2%] sm:px-[10%] lg:px-0 lg:margin-auto"
+    >
+      <!-- 
       <div class="md:hidden">
       <div class=""><img src="img/menu.svg" alt="menu" class="w-12 md:w-20 lg:w-24"></div>
       </div> -->
-    <div class="">
-      <a href=""><img src="img/Logo_MD.png" alt="Logo" class="w-20" /></a>
-    </div>
-    <div class="md:ml-28 hidden md:flex gap-2"></div>
-    <div class="flex gap-2">
-      <a href="https://miaudona.me/youtube"
-        ><img src="img/youtube.svg" alt="YT" class="w-12" /></a
-      >
-      <a href="https://miaudona.me/instagram"
-        ><img src="img/instagram.svg" alt="IG" class="w-12" /></a
-      >
-      <a href="https://miaudona.me/github"
-        ><img src="img/github.svg" alt="Git" class="w-12" /></a
-      >
+      <div class="">
+        <a href="https://wdona.dev"><img src="img/Logo_MD.png" alt="Logo" class="w-20" /></a>
+      </div>
+      <div class="md:ml-28 hidden md:flex gap-2"></div>
+      <div class="flex gap-2">
+        <a href="https://wdona.dev/youtube"
+          ><img src="img/youtube.svg" alt="YT" class="w-12" />
+        </a>
+        <a href="https://wdona.dev/instagram"
+          ><img src="img/instagram.svg" alt="IG" class="w-12" />
+        </a>
+        <a href="https://wdona.dev/github"
+          ><img src="img/github.svg" alt="Git" class="w-12" />
+        </a>
+      </div>
     </div>
   </div>
 </nav>
+<div class="fixed top-20 w-full z-100 opacity-20">
+  <LineaSeparadoraHorizontal />
+</div>
+
 
 <style>
   nav {
-    background-color: rgba(0, 0, 0, 0.329);
+    background-color: rgba(19, 19, 19, 0.267);
     backdrop-filter: blur(2px);
   }
 </style>

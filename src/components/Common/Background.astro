@@ -18,7 +18,7 @@ const position = Astro.props.position || "absolute";
 const circle = Astro.props.circle || "ellipse";
 ---
 
-<div class="circulo"></div>
+<div class="circulo hidden sm:block"></div>
 
 <style define:vars={{ o, tx, ty, x, y, position, circle }}>
   .circulo {

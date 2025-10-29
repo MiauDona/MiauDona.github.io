@@ -1,9 +1,11 @@
 ---
+import Background from "../Common/Background.astro";
 import ProyectoCard from "./Proyectos/ProyectoCard.astro";
 ---
 <div class="lg:w-[900px] sm:w-[90%] w-[98%] pt-24 sm:pt-0">
   <h2 class="text-5xl zilla-slab-regular mb-16 text-center">Proyectos principales</h2>
-  <div class="grid grid-cols-1 gap-8 zilla-slab-regular content-center items-center mb-12">
+  <div class="grid grid-cols-1 gap-8 zilla-slab-regular content-center items-center mb-12 relative">
+
     <ProyectoCard
       tec="img/kotlinlogo.webp"
       tec2="img/jetpackcomposelogo.webp"
@@ -14,6 +16,7 @@ import ProyectoCard from "./Proyectos/ProyectoCard.astro";
       img=""
       link="https://wdona.dev/burntout/"
     />
+    <Background o=".2" tx="200vw" ty="100vh" x="-30vw" y="-45dvh" />
     <ProyectoCard
       tec="img/astrologo.webp"
       title="Mi portfolio web"
@@ -22,6 +25,7 @@ import ProyectoCard from "./Proyectos/ProyectoCard.astro";
       img=""
       link="https://github.com/MiauDona/MiauDona.github.io"
     />
+    <Background o=".2" tx="200vw" ty="100vh" x="-120vw" y="50vh" />
       <!-- <ProyectoCard tec="" title="" text="" text2="" img="" link="" /> -->
   </div>
 </div>

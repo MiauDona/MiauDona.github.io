@@ -6,6 +6,7 @@ import Footer from "../components/Common/Footer.astro";
 import Background from "../components/Common/Background.astro";
 import Proyectos from "../components/Index/Proyectos.astro";
 import Habilidades from "../components/Index/Habilidades.astro";
+import SobreMi from "../components/Index/SobreMi.astro";
 ---
 
 <Layout title="wDona">
@@ -14,10 +15,10 @@ import Habilidades from "../components/Index/Habilidades.astro";
 
   <main class="flex flex-col justify-center items-center">
     <div class="max-w-[900px] flex flex-col justify-center items-center gap-1">
-      <!-- <Curriculum/> -->
+      <SobreMi/> 
       <!-- <GridCards/> -->
-      <Proyectos />
       <Habilidades />
+      <Proyectos />
     </div>
   </main>
   

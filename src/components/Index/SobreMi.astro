@@ -1,65 +1,26 @@
-<section class="flex">
-  <div class="my-card">
-    <article class="my-4 front-side rounded-2xl p-4 mx-4 lg:mx-0">
-      <h2 class="text-3xl mb-3 zilla-slab-regular">¿Quién soy?</h2>
-      <p class="zilla-slab-light">
-        Actualmente, estoy en 1º de Grado Superior en Desarrollo de aplicaciones
-        multiplataforma. En la ESO, consideré estudiar psicología, pero la
-        pasión por la tecnología prevaleció. Ahora, estoy centrado en explorar
-        el mundo digital en constante evolución y contribuir a su desarrollo y
-        comprensión de manera significativa.
-      </p>
-    </article>
-    <article class="my-4 back-side rounded-2xl p-4 mx-4 lg:mx-0">
-      <h2 class="text-3xl mb-3 zilla-slab-regular">¿Por qué MiauDona?</h2>
-      <p class="zilla-slab-light">
-        Mi nombre de usuario "MiauDona" surgió de una curiosa anécdota. Al
-        invertir las sílabas de mi nombre original, obtenía "Donanfer", y a los
-        9 años, cuando creé mi primer nombre de usuario en internet, lo elegí
-        como "donanfer9". Con el tiempo, mis amigos en línea comenzaron a
-        llamarme "Dona", y como me encantan los gatos, hace poco cambié mi
-        nombre a "MiauDona".
-      </p>
-    </article>
-  </div>
+---
+import Background from "../Common/Background.astro";
+import BotonSecundario from "../Common/BotonSecundario.astro";
+---
+
+<section
+  class="flex justify-center items-center flex-col lg:w-[900px] sm:w-[90%] w-[98%] pt-24 sm:pt-0 relative"
+>
+  <article
+    class="my-4 rounded-2xl p-4 mx-4 lg:mx-0 backdrop-blur-sm sm:max-w-[900px] w-full"
+  >
+    <div class="flex justify-center items-center gap-8">
+      <h2 class="text-5xl mb-4 zilla-slab-regular text-center">¿Quién soy?</h2>
+      <div class="flex justify-center items-center">
+        <BotonSecundario texto="Sobre mí" enlace="https://wdona.dev/sobre-mi" />
+      </div>
+    </div>
+    <p class="zilla-slab-regular text-xl">
+      Hola, soy Dona, desarrollador multiplataforma especializado en Kotlin, KMP
+      y Jetpack Compose, con preferencias a desarrollar back-end. Me apasiona
+      crear aplicaciones con lógica avanzada y aprender nuevas soluciones.
+    </p>
+
+    <Background o=".2" tx="100vw" ty="80vh" x="-80vw" y="0vh" />
+  </article>
 </section>
-
-<style>
-  section .my-card {
-    transform-style: preserve-3d;
-    transition: 0.3s;
-    perspective: 1000px;
-    height: max-content;
-  }
-
-  section:hover .my-card {
-    transform: rotateY(180deg);
-  }
-
-  section:hover .my-card .front-side {
-    display: none;
-  }
-
-  section:hover .my-card .back-side {
-    display: block;
-  }
-
-  .front-side {
-    color: #f3f4f6;
-    transform: rotateY(0deg);
-    background-color: #c714be4b;
-    min-height: 170px;
-    height: fit-content;
-    border: 3px solid #c714be4b;
-  }
-
-  .back-side {
-    color: #f3f4f6;
-    display: none;
-    transform: rotateY(-180deg);
-    background-color: #2577f14b;
-    min-height: 170px;
-    height: fit-content;
-    border: 3px solid #2577f14b;
-  }
-</style>

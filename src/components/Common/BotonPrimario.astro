@@ -1,0 +1,16 @@
+---
+interface Props {
+  texto: string;
+  enlace: string;
+}
+const texto = Astro.props.texto;
+const enlace = Astro.props.enlace;
+---
+
+<a
+  href={enlace}
+  class="zilla-slab-regular bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white sm:px-6 sm:py-3 rounded-lg hover:scale-105 transition-all duration-200 text-center w-full sm:w-auto inline-block px-4 py-2 text-xl"
+  target="_blank"
+>
+  {texto}
+</a>

@@ -1,4 +1,6 @@
 ---
+import BotonPrimario from '../../Common/BotonPrimario.astro';
+
 interface Props {
   title: string;
   text: string;
@@ -55,15 +57,13 @@ const summary = Astro.props.summary;
   <div id="project-description" class="flex flex-col gap-4">
     <div class="text-xl gap-8">
       <div class="zilla-slab-regular gap-4 flex flex-col">
-        {text && <p>{text}</p>}
-        {text2 && <p>{text2}</p>}
-        {text3 && <p>{text3}</p>}
-        {text4 && <p>{text4}</p>}
+        {text && <p class="zilla-slab-regular">{text}</p>}
+        {text2 && <p class="zilla-slab-regular">{text2}</p>}
+        {text3 && <p class="zilla-slab-regular">{text3}</p>}
+        {text4 && <p class="zilla-slab-regular">{text4}</p>}
       </div>
       { link && <div class="text-xl mt-4">
-         <a class="p-1 pl-0 w-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 
-                           rounded-xl sm:px-12 py-2 flex justify-center items-center hover:scale-105 transition-transform duration-300"
-                    href={link} target="_blank"> Échale un vistazo </a>
+         <BotonPrimario texto="Ver Proyecto" enlace={link} />
       </div> }
     </div>
   </div>

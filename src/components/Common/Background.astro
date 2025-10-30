@@ -7,7 +7,7 @@ interface Props {
   x?: string;
   position?: string;
   circle?: string;
-  visibleMobile?: boolean;
+  visibleMobile?: string;
 }
 
 const o = Astro.props.o; // Opacidad
@@ -17,7 +17,7 @@ const y = Astro.props.y || Astro.props.x || "calc(50% - var(--ty)/2)"; // Altura
 const x = Astro.props.x || Astro.props.y || "calc(50% - var(--tx)/2)"; // Distancia contando desde la izquierda
 const position = Astro.props.position || "absolute";
 const circle = Astro.props.circle || "ellipse";
-const visibleMobile = Astro.props.visibleMobile || true;
+const visibleMobile = Astro.props.visibleMobile;
 ---
 
 <div class="circulo"></div>

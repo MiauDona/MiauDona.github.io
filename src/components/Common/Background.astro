@@ -7,6 +7,7 @@ interface Props {
   x?: string;
   position?: string;
   circle?: string;
+  visibleMobile?: boolean;
 }
 
 const o = Astro.props.o; // Opacidad
@@ -16,11 +17,12 @@ const y = Astro.props.y || Astro.props.x || "calc(50% - var(--ty)/2)"; // Altura
 const x = Astro.props.x || Astro.props.y || "calc(50% - var(--tx)/2)"; // Distancia contando desde la izquierda
 const position = Astro.props.position || "absolute";
 const circle = Astro.props.circle || "ellipse";
+const visibleMobile = Astro.props.visibleMobile || true;
 ---
 
 <div class="circulo"></div>
 
-<style define:vars={{ o, tx, ty, x, y, position, circle }}>
+<style define:vars={{ o, tx, ty, x, y, position, circle, visibleMobile }}>
   .circulo {
     width: var(--tx);
     height: var(--ty);
@@ -35,5 +37,11 @@ const circle = Astro.props.circle || "ellipse";
     left: var(--x);
     border-radius: 50%;
     z-index: -1;
+  }
+
+  @media (max-width: 640px) {
+    .circulo {
+      display: {visibleMobile ? 'block' : 'none'};
+    }
   }
 </style>

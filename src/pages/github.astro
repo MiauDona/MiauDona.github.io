@@ -3,11 +3,11 @@
     <meta
       http-equiv="refresh"
       content="0;url=https://www.github.com/MiauDona"
+      transition:animate="fade"
+      window-target="_blank"
     />
   </head>
-  <body class="grid items-center justify-center w-full h-[100vh]">
-    <div class="loader"></div>
-  </body>
+  <body></body>
 </html>
 
 <style>
@@ -16,60 +16,12 @@
       background-color: white;
       color: black;
     }
-    .loader {
-      background: conic-gradient(
-        #5cb7ff,
-        #d8a4f3,
-        #e79af3,
-        #7aefb5,
-        #3498db
-      ); /* Degradado circular */
-    }
   }
 
   @media (prefers-color-scheme: dark) {
     body {
       background-color: black;
       color: white;
-    }
-    .loader {
-      background: conic-gradient(
-        #d2e7f6,
-        #d8a4f3,
-        #f3a39a,
-        #f3e2a1,
-        #3498db
-      ); /* Degradado circular */
-    }
-  }
-
-  body {
-    margin: 0;
-  }
-
-  .loader {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    mask: radial-gradient(
-      farthest-side,
-      transparent calc(100% - 10px),
-      black
-    ); /* Transparencia interna */
-    -webkit-mask: radial-gradient(
-      farthest-side,
-      transparent calc(100% - 10px),
-      black
-    ); /* Para compatibilidad */
-    animation: spin-modern 1.2s linear infinite; /* Animación de rotación */
-  }
-
-  @keyframes spin-modern {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
     }
   }
 </style>

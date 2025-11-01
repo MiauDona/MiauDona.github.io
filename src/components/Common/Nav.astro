@@ -3,7 +3,7 @@ import LineaSeparadoraHorizontal from "./LineaSeparadoraHorizontal.astro";
 ---
 
 <nav
-  class="text-white text-xl sm:text-2xl h-20 font-bold fixed top-0 w-full z-10 flex items-center justify-center flex-col px-4"
+  class="text-white text-xl sm:text-2xl h-20 fixed top-0 w-full z-10 flex items-center justify-center flex-col px-4"
 >
   <div class="lg:flex lg:justify-center items-center w-full">
     <div
@@ -13,9 +13,9 @@ import LineaSeparadoraHorizontal from "./LineaSeparadoraHorizontal.astro";
       <div class="md:hidden">
       <div class=""><img src="img/menu.svg" alt="menu" class="w-12 md:w-20 lg:w-24"></div>
       </div> -->
-      <div class="flex items-center gap-8">
+      <div class="items-center gap-8 hidden md:flex">
         <a href="/"><img src="/img/Logo_MD.png" alt="Logo" class="w-20" /></a>
-        <div class="hidden md:flex items-center md:gap-4">
+        <div class="md:flex items-center md:gap-4">
           <a href="/" class="hover:underline zilla-slab-regular">Inicio</a>
           <a href="/blogs" class="hover:underline zilla-slab-regular">Blogs</a>
           <!-- 
@@ -24,7 +24,17 @@ import LineaSeparadoraHorizontal from "./LineaSeparadoraHorizontal.astro";
         </div>
       </div>
 
-      
+      <div class="md:hidden">
+        <button
+          id="menu-toggle"
+          class="flex items-center"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <img src="/img/menu.svg" alt="menu" class="w-12 md:w-20 lg:w-24" />
+        </button>
+      </div>
+
       <div class="flex gap-2">
         <a href="/youtube"
           ><img src="/img/youtube.svg" alt="YT" class="w-12" />
@@ -38,15 +48,57 @@ import LineaSeparadoraHorizontal from "./LineaSeparadoraHorizontal.astro";
       </div>
     </div>
   </div>
+
+  <div
+    id="mobile-menu"
+    class="md:hidden w-full flex flex-col items-center gap-12 fixed top-20 z-50 h-[100vh] -translate-x-full left-0 opacity-0 transition-all duration-200"
+  >
+    <ul class="w-full text-center">
+      <LineaSeparadoraHorizontal />
+      <a href="/">
+        <li class="py-4"><p class="zilla-slab-regular">Inicio</p></li>
+      </a>
+      <LineaSeparadoraHorizontal />
+      <a href="/blogs">
+        <li class="py-4"><p class="zilla-slab-regular">Blogs</p></li>
+      </a>
+      <LineaSeparadoraHorizontal />
+    </ul>
+  </div>
 </nav>
 <div class="fixed top-20 w-full z-100 opacity-20">
   <LineaSeparadoraHorizontal />
 </div>
+<script is:inline>
+  const toggleButton = document.getElementById("menu-toggle");
+const menu = document.getElementById("mobile-menu");
 
+toggleButton.addEventListener("click", () => {
+  if (menu.classList.contains("-translate-x-full")) {
+    // aparecer desde la izquierda
+    menu.classList.remove("-translate-x-full", "opacity-0");
+    menu.classList.add("translate-x-0", "opacity-100");
+  } else {
+    // desaparecer hacia la izquierda
+    menu.classList.remove("translate-x-0", "opacity-100");
+    menu.classList.add("-translate-x-full", "opacity-0");
+  }
+});
+</script>
 
 <style>
-  nav {
-    background-color: rgba(19, 19, 19, 0.267);
+  nav,
+  #mobile-menu {
+    background-color: rgba(0, 0, 0, 0.753);
     backdrop-filter: blur(2px);
+  }
+
+  #mobile-menu {
+    background-color: rgba(0, 0, 0, 0.952);
+    backdrop-filter: blur(4px);
+  }
+
+  p {
+    margin-top: 0;
   }
 </style>

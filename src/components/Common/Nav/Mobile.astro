@@ -1,0 +1,70 @@
+---
+import LineaSeparadoraHorizontal from "../LineaSeparadoraHorizontal.astro";
+---
+
+<div class="md:hidden flex items-center gap-2">
+  <button
+    id="menu-toggle"
+    class="flex items-center"
+    aria-controls="mobile-menu"
+    aria-expanded="false"
+  >
+    <img src="/img/menu.svg" alt="menu" class="w-12 md:w-20 lg:w-24" />
+  </button>
+
+  <div>
+    <p class="text-3xl">Menu</p>
+  </div>
+</div>
+
+<div
+  id="mobile-menu"
+  class="md:hidden w-full flex flex-col items-center gap-12 fixed top-20 z-50 h-[100vh] -translate-x-full left-0 opacity-0 transition-all duration-200"
+>
+  <ul class="w-full text-center">
+    <LineaSeparadoraHorizontal />
+    <a href="/">
+      <li class="py-4"><p class="zilla-slab-regular">Inicio</p></li>
+    </a>
+    <LineaSeparadoraHorizontal />
+    <a href="/blogs">
+      <li class="py-4"><p class="zilla-slab-regular">Blogs</p></li>
+    </a>
+    <LineaSeparadoraHorizontal />
+  </ul>
+  <div class="flex gap-6 items-center">
+    <a href="/youtube" target="_blank"
+      ><img src="/img/youtube.svg" alt="YT" class="w-12" />
+    </a>
+    <a href="/github" target="_blank"
+      ><img src="/img/github.svg" alt="Git" class="w-12" />
+    </a>
+    <a href="/discord" target="_blank"
+      ><img src="/img/discordlogo.webp" alt="DC" class="w-10" />
+    </a>
+  </div>
+</div>
+
+<script is:inline>
+  const toggleButton = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+
+  toggleButton.addEventListener("click", () => {
+    if (menu.classList.contains("-translate-x-full")) {
+      // aparecer desde la izquierda
+      menu.classList.remove("-translate-x-full", "opacity-0");
+      menu.classList.add("translate-x-0", "opacity-100");
+    } else {
+      // desaparecer hacia la izquierda
+      menu.classList.remove("translate-x-0", "opacity-100");
+      menu.classList.add("-translate-x-full", "opacity-0");
+    }
+  });
+</script>
+
+<style>
+  #mobile-menu {
+    background-color: rgba(0, 0, 0, 0.952);
+    backdrop-filter: blur(4px);
+  }
+</style>

@@ -50,7 +50,3 @@ a {
   text-wrap: pretty;
   @apply text-xl;
 }
-
-p {
-  @apply mt-6;
-}

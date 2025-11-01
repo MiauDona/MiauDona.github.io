@@ -1,50 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400&display=swap");
 
-  html {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    width: 100%;
-  }
+html {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 100%;
+}
 
-  .zilla-slab-light {
-    font-family: "Zilla Slab", serif;
-    font-weight: 300;
-    font-style: normal;
-  }
+.zilla-slab-light {
+  font-family: "Zilla Slab", serif;
+  font-weight: 300;
+  font-style: normal;
+}
 
-  .zilla-slab-regular {
-    font-family: "Zilla Slab", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+.zilla-slab-regular {
+  font-family: "Zilla Slab", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-  a {
-    text-decoration: none;
-  }
+* {
+  font-family: "Zilla Slab", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
-  body {
-    background-color: rgb(8, 8, 8);
-    color: white;
-  }
+a {
+  text-decoration: none;
+}
 
-  h1 {
-        @apply text-6xl;
-      }
+body {
+  background-color: rgb(8, 8, 8);
+  color: white;
+}
 
-      h2 {
-        @apply text-5xl;
-      }
+h1 {
+  @apply text-6xl;
+}
 
-      h3 {
-        @apply text-4xl;
-      }
+h2 {
+  @apply text-5xl;
+}
 
-      p,
-      a {
-        text-wrap: pretty;
-        @apply text-xl;
-      }
+h3 {
+  @apply text-4xl;
+}
 
-      p {
-        @apply mt-6;
-      }
+p,
+a {
+  text-wrap: pretty;
+  @apply text-xl;
+}
+
+p {
+  @apply mt-6;
+}

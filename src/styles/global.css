@@ -50,3 +50,7 @@ a {
   text-wrap: pretty;
   @apply text-xl;
 }
+
+section {
+  @apply my-8;
+}

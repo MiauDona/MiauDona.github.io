@@ -13,17 +13,17 @@ import LineaSeparadoraHorizontal from "./LineaSeparadoraHorizontal.astro";
       <div class="md:hidden">
       <div class=""><img src="img/menu.svg" alt="menu" class="w-12 md:w-20 lg:w-24"></div>
       </div> -->
-      <div class="">
+      <div class="flex items-center gap-8">
         <a href="/"><img src="/img/Logo_MD.png" alt="Logo" class="w-20" /></a>
+        <div class="hidden md:flex items-center md:gap-4">
+          <a href="/" class="hover:underline zilla-slab-regular">Inicio</a>
+          <a href="/blogs" class="hover:underline zilla-slab-regular">Blogs</a>
+          <!-- 
+            <a href="/sobre-mi" class="hover:underline">Sobre mí</a>
+           -->
+        </div>
       </div>
 
-      <div class="hidden md:flex items-center md:gap-4">
-        <a href="/" class="hover:underline zilla-slab-regular">Inicio</a>
-        <a href="/blogs" class="hover:underline zilla-slab-regular">Blogs</a>
-        <!-- 
-          <a href="/sobre-mi" class="hover:underline">Sobre mí</a>
-         -->
-      </div>
       
       <div class="flex gap-2">
         <a href="/youtube"

@@ -1,0 +1,49 @@
+---
+import BotonPrimario from "../components/Common/BotonPrimario.astro";
+import Footer from "../components/Common/Footer.astro";
+import Head from "../components/Common/Head.astro";
+import Nav from "../components/Common/Nav.astro";
+import '../styles/global.css';
+
+
+interface Props {
+  title: string;
+  description: string;
+  footerText: string;
+  keywords?: string;
+}
+const { title, description, keywords, footerText } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <Head
+      title={title}
+      titlePestana={title}
+      keywords={keywords}
+      description={description}
+    />
+  </head>
+  <body>
+    <Nav />
+    <main>
+      <h2>Error 404 - Página no encontrada</h2>
+      <p class="mt-4">Lo siento, la página que buscas no existe.</p>
+      <div class="w-content mt-6 md:mt-12 px-4 sm:px-0">
+          <BotonPrimario texto="Volver a la página principal" enlace="/" target="_self"/>
+      </div>
+    </main>
+    <Footer texto={footerText} />
+  </body>
+</html>
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Jaini&family=Mitr:wght@200&family=Zilla+Slab:wght@300;400&display=swap");
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 90vh;
+    @apply px-4 sm:px-12 md:px-4 pt-28;
+  }
+</style>

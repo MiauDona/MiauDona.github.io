@@ -1,0 +1,15 @@
+---
+import LineaSeparadoraHorizontal from "../../LineaSeparadoraHorizontal.astro";
+
+interface Props {
+    enlace: string;
+    texto: string;
+}
+
+const { enlace, texto } = Astro.props;
+---
+
+<a href={enlace}>
+      <li class="py-4"><p class="zilla-slab-regular">{texto}</p></li>
+    </a>
+    <LineaSeparadoraHorizontal />

@@ -1,5 +1,6 @@
 ---
 import LineaSeparadoraHorizontal from "../LineaSeparadoraHorizontal.astro";
+import ItemNavMobile from "./Item/Mobile.astro";
 ---
 
 <div class="md:hidden flex items-center gap-2">
@@ -23,14 +24,8 @@ import LineaSeparadoraHorizontal from "../LineaSeparadoraHorizontal.astro";
 >
   <ul class="w-full text-center">
     <LineaSeparadoraHorizontal />
-    <a href="/">
-      <li class="py-4"><p class="zilla-slab-regular">Inicio</p></li>
-    </a>
-    <LineaSeparadoraHorizontal />
-    <a href="/blogs">
-      <li class="py-4"><p class="zilla-slab-regular">Blogs</p></li>
-    </a>
-    <LineaSeparadoraHorizontal />
+    <ItemNavMobile enlace="/" texto="Inicio" />
+    <ItemNavMobile enlace="/blogs" texto="Blogs" />
   </ul>
   <div class="flex gap-6 items-center">
     <a href="/youtube" target="_blank"

@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+import Blog from '../../layouts/Blog.astro';
+import Nav from '../../components/Common/Nav.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+
+  return posts.map(post => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Blog
+  title={post.data.title}
+  description={post.data.description ?? ''}
+  keywords={post.data.keywords}
+  footerText={post.data.footerText ?? 'Blog de wDona'}
+>
+  <article class="">
+    <Content />
+  </article>
+</Blog>

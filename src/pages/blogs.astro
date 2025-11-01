@@ -1,0 +1,24 @@
+---
+import BotonPrimario from "../components/Common/BotonPrimario.astro";
+import BotonSecundario from "../components/Common/BotonSecundario.astro";
+import Nav from "../components/Common/Nav.astro";
+import PaginaDeBlogs from "../layouts/PaginaDeBlogs.astro";
+---
+
+<PaginaDeBlogs>
+  <Nav />
+  <main
+    class="flex flex-col items-center mt-28 mb-24 px-4 h-[100vh]"
+  >
+    <div
+      class="max-w-[900px] w-full flex flex-col justify-center items-center gap-8"
+    >
+      <h1>Blogs</h1>
+      <div class="w-full flex flex-col gap-12">
+        <ul>
+          <li><BotonPrimario texto="Prueba" enlace="/blog/prueba" /></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</PaginaDeBlogs>

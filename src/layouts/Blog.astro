@@ -1,8 +1,10 @@
 ---
 import BotonPrimario from "../components/Common/BotonPrimario.astro";
-import BotonSecundario from "../components/Common/BotonSecundario.astro";
 import Footer from "../components/Common/Footer.astro";
+import Head from "../components/Common/Head.astro";
 import Nav from "../components/Common/Nav.astro";
+import '../styles/global.css';
+
 
 interface Props {
   title: string;
@@ -14,51 +16,22 @@ const { title, description, keywords, footerText } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es" class="overflow-x-hidden">
+<html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="author" content="wDona" />
-    <meta name="keywords" content={keywords} />
-    <meta name="robots" content="index, follow" />
-
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="/img/Gato_D.png" />
-    <meta property="og:url" content="https://wdona.dev/" />
-    <meta property="og:type" content="website" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content="/img/Gato_D.png" />
-
-    <!-- JSON-LD PARA GOOGLE -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Fernando M. de Cisneros González",
-        "alternateName": ["wDona", "MiauDona", "YoSoyDona", "Dona"],
-        "url": "https://wdona.dev/",
-        "image": "/img/Gato_D.png",
-        "jobTitle": "Desarrollador de aplicaciones multiplataforma",
-        "description": "Portfolio de proyectos personales y profesionales en desarrollo multiplataforma.",
-        "sameAs": ["https://github.com/MiauDona"]
-      }
-    </script>
-
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/png" href="/img/Gato_D.png" />
-    <title>{title}</title>
+    <Head
+      title={title}
+      titlePestana={title}
+      keywords={keywords}
+      description={description}
+    />
   </head>
-  <body class="">
+  <body>
     <Nav />
     <main>
       <slot />
     </main>
-    <div class="flex justify-center items-center fit-content ">
-        <BotonPrimario texto="Volver al la pagina principal" enlace="/" />
+    <div class="flex justify-center items-center fit-content mt-6 md:mt-12 px-4 sm:px-0">
+        <BotonPrimario texto="Volver a blogs" enlace="/blogs" />
     </div>
     <Footer texto={footerText + ' x wDona'} />
   </body>
@@ -66,55 +39,10 @@ const { title, description, keywords, footerText } = Astro.props;
 <style is:global>
   @import url("https://fonts.googleapis.com/css2?family=Jaini&family=Mitr:wght@200&family=Zilla+Slab:wght@300;400&display=swap");
 
-  html {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    width: 100%;
-  }
-
   main {
     max-width: 700px;
     margin: 0 auto;
     min-height: 90vh;
     @apply px-4 sm:px-12 md:px-4 pt-28;
-  }
-
-  .jaini {
-    font-family: "Jaini", system-ui;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.5px;
-  }
-
-  * {
-    font-family: "Zilla Slab", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  body {
-    background-color: rgb(8, 8, 8);
-    color: white;
-  }
-
-  h1 {
-    @apply text-6xl;
-    
-  }
-
-  h2 {
-    @apply text-5xl;
-  }
-
-  h3 {
-    @apply text-4xl;
-  }
-
-  p,
-  a {
-    @apply text-xl mt-6;
-    a {
-    text-decoration: none;
-  }
   }
 </style>

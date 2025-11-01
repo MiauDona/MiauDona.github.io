@@ -1,0 +1,30 @@
+---
+import Footer from "../components/Common/Footer.astro";
+import Head from "../components/Common/Head.astro";
+import '../styles/global.css';
+
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <Head
+      title="wDona | Blog"
+      titlePestana="Blog de wDona"
+      keywords="desarrollador, aplicaciones multiplataforma, portfolio, Astro, programación, frontend, backend, wdona, dona, miaudona, kotlin, jetpack compose, kmp, blog, blogs"
+      description="Aqui encontrarás mis blogs y artículos sobre temas diversos, que me apasionan y que espero que te resulten interesantes también."
+    />
+    <style is:global>
+      * {
+        font-family: "Zilla Slab", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+    </style>
+  </head>
+  <body>
+    <slot />
+    <Footer texto="Blog de wDona" />
+  </body>
+</html>

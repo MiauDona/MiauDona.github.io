@@ -1,0 +1,66 @@
+---
+import '../../styles/global.css';
+
+interface Props {
+    title: string;
+    titlePestana: string;
+    keywords?: string;
+    description?: string;
+}
+
+const { title, titlePestana, keywords, description } = Astro.props;
+---
+
+<meta charset="UTF-8" />
+    <meta name="author" content="wDona" />
+    <meta
+      name="keywords"
+      content={keywords}
+    />
+    <meta name="robots" content="index, follow" />
+
+    <meta
+      property="og:title"
+      content={title}
+    />
+    <meta
+      property="og:description"
+      content={description}
+    />
+    <meta property="og:image" content="/img/Gato_D.png" />
+    <meta property="og:url" content="https://wdona.dev/" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content={title}
+    />
+    <meta
+      name="twitter:description"
+      content={description}
+    />
+    <meta name="twitter:image" content="/img/Gato_D.png" />
+
+    <!-- JSON-LD PARA GOOGLE -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Fernando M. de Cisneros González",
+        "alternateName": ["wDona", "MiauDona", "YoSoyDona", "Dona"],
+        "url": "https://wdona.dev/",
+        "image": "/img/Gato_D.png",
+        "jobTitle": "Desarrollador de aplicaciones multiplataforma",
+        "description": "Portfolio de proyectos personales y profesionales en desarrollo multiplataforma.",
+        "sameAs": ["https://github.com/MiauDona"]
+      }
+    </script>
+
+    <meta
+      name="description"
+      content={description}
+    />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/img/Gato_D.png" />
+    <title>{titlePestana}</title>

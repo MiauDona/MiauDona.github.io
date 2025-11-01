@@ -52,5 +52,5 @@ a {
 }
 
 section {
-  @apply my-8;
+  @apply md:my-8 my-3;
 }

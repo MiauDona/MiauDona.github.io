@@ -3,19 +3,23 @@ import LineaSeparadoraHorizontal from "../LineaSeparadoraHorizontal.astro";
 import ItemNavMobile from "./Item/Mobile.astro";
 ---
 
-<div class="md:hidden flex items-center gap-2">
-  <button
-    id="menu-toggle"
-    class="flex items-center"
-    aria-controls="mobile-menu"
-    aria-expanded="false"
-  >
-    <img src="/img/menu.svg" alt="menú" class="w-12 md:w-20 lg:w-24" />
-  </button>
-
-  <div>
-    <p class="text-3xl">Menú</p>
+<div class="md:hidden flex items-center justify-between w-full">
+  <div class="md:hidden flex items-center gap-2">
+    <button
+      id="menu-toggle"
+      class="flex items-center"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      <img src="/img/menu.svg" alt="menú" class="w-12 md:w-20 lg:w-24" />
+    </button>
+  
+    <div>
+      <p class="text-3xl">Menú</p>
+    </div>
   </div>
+
+  <a href="/"><img src="/img/Logo_MD.png" alt="Logo" class="w-16" /></a>
 </div>
 
 <div

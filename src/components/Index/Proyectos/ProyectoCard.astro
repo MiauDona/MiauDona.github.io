@@ -1,5 +1,6 @@
 ---
-import BotonPrimario from '../../Common/BotonPrimario.astro';
+import BotonPrimario from "../../Common/BotonPrimario.astro";
+import BotonSecundario from "../../Common/BotonSecundario.astro";
 
 interface Props {
   title: string;
@@ -7,7 +8,7 @@ interface Props {
   text2?: string;
   text3?: string;
   text4?: string;
-  link?: string;
+  link: string;
   img?: string;
   tec: string;
   tec2?: string;
@@ -30,31 +31,82 @@ const tec4 = Astro.props.tec4;
 const tec5 = Astro.props.tec5;
 const summary = Astro.props.summary;
 
+const alt = "Imagen de " + title.toLowerCase();
+
 // todo: agregar imagenes de los proyectos
 // todo: hacer que al pasar por encima se abra la descripcion completa y se cierre
-
 ---
 
 <div
   class="card rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 sm:px-12 sm:py-12 px-6 py-10"
 >
-  <div class="flex sm:justify-between sm:items-center flex-col-reverse sm:flex-row gap-4 sm:gap-0 mb-4">
+  <div
+    class="flex sm:justify-between sm:items-center flex-col-reverse sm:flex-row gap-4 sm:gap-0 mb-4"
+  >
     <h3 class="text-4xl sm:text-4xl">{title}</h3>
-
-    <div id="tech-icons" class="flex sm:items-center sm:justify-center sm:items-center gap-2">
-      {tec && <div class=""> <img src={tec} alt="tec" class="h-8" loading="lazy"/> </div>}
-      {tec2 && <div class=""> <img src={tec2} alt="tec2" class="h-8" loading="lazy"/> </div>}
-      {tec3 && <div class=""> <img src={tec3} alt="tec3" class="h-8" loading="lazy"/> </div>}
-      {tec4 && <div class=""> <img src={tec4} alt="tec4" class="h-8" loading="lazy"/> </div>}
-      {tec5 && <div class=""> <img src={tec5} alt="tec5" class="h-8" loading="lazy"/> </div>}
-    </div>
   </div>
 
-  <div id="project-summary" class="text-xl">
-    {summary && <p class="zilla-slab-regular mb-4">{summary}</p>}
+  <div class="grid w-full md:grid-cols-2">
+    
+    {
+      img && (
+        <div class=" hidden md:flex h-full justify-center items-center mx-auto pr-6">
+          <img class="rounded-lg" src={img} alt={alt} />
+        </div>
+      )
+    }
+      <div class="text-xl md:flex md:justify-center md:items-center">
+        <div>
+          {summary && <p class="zilla-slab-regular mb-4">{summary}</p>}
+          <BotonSecundario texto="Saber más" enlace={link} />
+          <div id="tech-icons" class="flex sm:items-center gap-2 mt-4 ml-1">
+            {
+              tec && (
+                <div>
+                  {" "}
+                  <img src={tec} alt="tec" class="h-6" loading="lazy" />{" "}
+                </div>
+              )
+            }
+            {
+              tec2 && (
+                <div>
+                  {" "}
+                  <img src={tec2} alt="tec2" class="h-6" loading="lazy" />{" "}
+                </div>
+              )
+            }
+            {
+              tec3 && (
+                <div>
+                  {" "}
+                  <img src={tec3} alt="tec3" class="h-6" loading="lazy" />{" "}
+                </div>
+              )
+            }
+            {
+              tec4 && (
+                <div>
+                  {" "}
+                  <img src={tec4} alt="tec4" class="h-6" loading="lazy" />{" "}
+                </div>
+              )
+            }
+            {
+              tec5 && (
+                <div>
+                  {" "}
+                  <img src={tec5} alt="tec5" class="h-6" loading="lazy" />{" "}
+                </div>
+              )
+            }
+          </div>
+
+        </div>
+      </div>
   </div>
 
-  <div id="project-description" class="flex flex-col gap-4">
+  <div class="flex flex-col gap-4 hidden">
     <div class="text-xl gap-8">
       <div class="zilla-slab-regular gap-4 flex flex-col">
         {text && <p class="zilla-slab-regular">{text}</p>}
@@ -62,10 +114,14 @@ const summary = Astro.props.summary;
         {text3 && <p class="zilla-slab-regular">{text3}</p>}
         {text4 && <p class="zilla-slab-regular">{text4}</p>}
       </div>
-      { link && <div class="text-xl mt-4">
-         <BotonPrimario texto="Ver Proyecto" enlace={link} />
-      </div> }
     </div>
+    {
+      link && (
+        <div class="text-xl mt-4">
+          <BotonPrimario texto="Ver Proyecto" enlace={link} />
+        </div>
+      )
+    }
   </div>
 </div>
 
@@ -74,5 +130,6 @@ const summary = Astro.props.summary;
     height: max-content;
     width: 100%;
     border-radius: 16px;
+    text-wrap: pretty;
   }
 </style>

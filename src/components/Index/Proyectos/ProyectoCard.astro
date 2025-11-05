@@ -38,10 +38,17 @@ const alt = "Imagen de " + title.toLowerCase();
 ---
 
 <div
-  class="card rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 sm:px-12 sm:py-12 px-6 py-10"
+  class="card rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 sm:px-12 sm:py-12 px-6 py-10 relative overflox-hidden"
 >
+{img && (
+    <div
+      class="absolute inset-0 bg-cover bg-center md:hidden rounded-xl"
+      style={`background-image: url('${img}'); opacity: 0.25;`}
+    ></div>
+  )}
+
   <div
-    class="flex sm:justify-between sm:items-center flex-col-reverse sm:flex-row gap-4 sm:gap-0 mb-4"
+    class="flex sm:justify-between sm:items-center flex-col-reverse sm:flex-row gap-4 sm:gap-0 mb-4 relative z-5"
   >
     <h3 class="text-4xl sm:text-4xl">{title}</h3>
   </div>
@@ -132,4 +139,10 @@ const alt = "Imagen de " + title.toLowerCase();
     border-radius: 16px;
     text-wrap: pretty;
   }
+
+  @media (min-width: 768px) {
+  .card {
+    background-image: none !important;
+  }
+}
 </style>

@@ -58,7 +58,7 @@ const alt = "Imagen de " + title.toLowerCase();
     {
       img && (
         <div class=" hidden md:flex h-full justify-center items-center mx-auto pr-6">
-          <img class="rounded-lg" src={img} alt={alt} />
+          <img class="rounded-lg aspect-video object-cover" src={img} alt={alt} />
         </div>
       )
     }
